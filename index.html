@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="hu">
+  <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" type="text/css" href="styles.css">
+      <link rel="apple-touch-icon" sizes="180x180" href="pics/favicon/apple-touch-icon.png">
+      <link rel="icon" type="image/png" sizes="16x16" href="pics/favicon/favicon-16x16.png">
+      <link rel="manifest" href="pics/favicon/site.webmanifest">
+      <link rel="icon" type="image/png" sizes="32x32" href="pics/favicon/favicon-32x32.png">
+      <title>JavaScript alapok</title>
+  </head>
+  <body>
+    <table>
+      <tr>
+        <td id="titleBar" colspan="2">
+          <h1 id="titleText">JavaScript alapismeretek</h1>
+          <img src="pics/icon.png" alt="A JavaScript logója" id="titleImage">
+        </td>
+      </tr>
+
+      <tr>
+        <td id="bev">
+          <h2>Introdukció</h2>
+          <hr>
+          <div id="bevDiv">
+            <ul id="bevText">
+              <li>HTML 5 - az oldal tartalma</li>
+              <li>CSS	3	- az oldal elrendezése, stílusa</li>
+              <li>JavaScript - az oldal viselkedése, dinamikája</li>
+              <li>Case sensitive (Kis és nagy betűkre érzékeny)</li>
+              <li>A JavaScript kódot közvetlenül a böngésző hajtja végre, nincs szükség fordítóra.</li>
+            </ul>
+          </div>
+          <img src="pics/kep.png" alt="VSCode kódrészlet">
+        </td>
+      </tr>
+
+        <tr id="content">
+          <td>
+            <h2 id="contentTitle">Adattípusok</h2> 
+            <hr>
+            <div id="contentButton">
+              <button id="types" onclick="dataTypes()">Adattípusok</button>
+              <button id="vars" onclick="variables()">Változók</button>
+              <button id="practice" onclick="practice()">Dátum és idő</button>
+            </div>
+
+            <div class="Datatypes">
+              <ul>
+                <li>Aritmetikai adat: egyetlen számot ad vissza</li>
+                <li>String: egyetlen stringet eredményez</li>
+                <li>Boolean (Logikai érték): igaz vagy hamis értéket eredményez</li>
+                <li>Array (Tömb): Több adatot láncszerűen tárol, melyek úgynevezett indexekkel vannak ellátva az elérés érdekében</li>
+                <li>Objektum:</li>
+                <ul>
+                  <li>Adatszerkezet, mely több adatot is tartalmazhat</li>
+                  <li>Függvényeket is tartalmazhat adatok feldolgozására vagy egy adott feladat elvégzésére</li>
+                </ul>
+              </ul>
+              <h3>Adattípusok deklarálása</h3>
+              <ul id="snippet">
+                <li><code>let x = 69;</code> - Aritmetikai változó (szám)</li>
+                <li><code>let nev = "Kunu Márió";</code> - String</li>
+                <li><code>let vanElete = false;</code> - Boolean (Logikai érték)</li>
+                <li><code>let megvolt = ["Réka", 10, "Betti", 2, "Bogi", 1, "Zsófi", 0, true, false];</code> - Array (Tömb)</li>
+                <li><code>let Sandor = new Ember(96, 176, 21, 70, true);</code> - Objektum</li>
+              </ul>
+            </div>
+
+            <div class="Variables">
+              <p>
+                A JavaScript lazán típusos vagy gyengén típusos nyelv. A változók deklarálásánál nem kell megadni az adat típusát.<br>
+                A program futása során a változónak akár a típusa is megváltozhat!
+              </p>
+              <ul>
+                <li>Változó: név, típus, érték.</li>
+                <li>Literál: típus, érték.</li>
+                <li>Deklaráció: A változó elnevezése, hely lefoglalás a memóriában, de nem adunk neki értéket</li>
+                <li>Inicializáció: Kezdőérték adása. Ez az érték a program futása során megváltozhat.</li>
+              </ul>
+              <h2>JavaScript változók fajtái:</h2>
+              <ul>
+                <li><code>var</code> - Globális szintű változó. Manapság elavult típus, heylette a <code>let</code> kulcsszót használják változók deklarálásánál. Változhat futtatási időben.</li>
+                <li><code>let</code> - Blokk szintű változó, deklarálási "helyétől" függően nem terjed ki az egész kódra. Változhat futási időben.</li>
+                <li><code>const</code> - Konstans, vagyis állandó változó deklarálása. Értéke változtathatatlan.</li>
+              </ul>
+              <h3></h3>
+              <ul id="snippet">
+                <li id="practiceList"><code>let szam = 0;</code></li>
+                <li><code>var megegyszam = 69;</code></li>
+                <li><code>const harmadikszam = 777</code> - Soha nem fog megváltozni az értéke!</li>
+                <li><code>let nevek = ["ertek", 784579, false, true];</code> - Tömb típusú váltózóknak való értékadás</li>
+              </ul>
+            </div>
+          </td>
+        </tr>
+    </table>
+    <h5>&copy;Opus vos Liberabit</h5>
+    <script src="script.js"></script>
+  </body>
+</html>
